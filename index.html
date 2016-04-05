@@ -19,6 +19,45 @@
 			<script src="js/jquery-2.1.4.min.js"></script>
 		<!--bootstrap-js-->
 			<script src="js/bootstrap.min.js"></script>
+      <script src="js/data.js"></script>
+      <script>
+
+function createCategoryButton(name, image) {
+  var category = '<div class="col-md-4 grid-stn simpleCart_shelfItem">';
+  category += '<div class="ih-item square">';
+  category += '<div class="img"><a href="products.html"><img src="images/';
+  category += image;
+  category += '" alt="/" class="img-responsive gri-wid"></a></div>';
+  category += '<div class="info">';
+  category += '<div class="col-md-offset-5 styl-hdn">';
+  category += '<a href="products.html"><h3>';
+  category += name;
+  category += '</h3></a>';
+  category += '</div>';
+  category += '</div>';
+  category += '</div>';
+  category += '</div>';
+  return category;
+}
+
+$( document ).ready(function() {
+  for (var menuItem=0; menuItem<categories.length; menuItem++) {
+
+    //Append categories to the main menu in the header
+    var menuText = '<li><a href="products.html">';
+    menuText += categories[menuItem].name;
+    menuText += '</a></li>';
+    $("#menu").append(menuText);
+
+    //Apend category name and image to the list-style
+    $("#categoriesList").append(createCategoryButton(
+      categories[menuItem].name, categories[menuItem].image));
+  }
+
+  $("#categoriesList").append('<div class="clearfix"></div>');
+
+});
+      </script>
 		<!--script-->
     </head>
     <body>
@@ -30,7 +69,7 @@
                     </div>
                     <div class="clearfix"></div>
                 </div>
-                <!---menu-----bar--->
+                <!-- menu bar -->
                 <div class="header-botom">
                     <div class="content white">
                     <nav class="navbar navbar-default nav-menu" role="navigation">
@@ -43,14 +82,10 @@
                             </button>
                         </div>
                         <div class="clearfix"></div>
-                        <!--/.navbar-header-->
+                        <!-- /.navbar-header -->
 
                         <div class="collapse navbar-collapse collapse-pdng" id="bs-example-navbar-collapse-1">
-                            <ul class="nav navbar-nav nav-font">
-                              <li><a href="products.html">Category1</a></li>
-                              <li><a href="products.html">Category2</a></li>
-                              <li><a href="products.html">Category3</a></li>
-                              <li><a href="products.html">Category4</a></li>
+                            <ul id="menu" class="nav navbar-nav nav-font">
                               <div class="clearfix"></div>
                             </ul>
                             <div class="clearfix"></div>
@@ -69,85 +104,19 @@
         <div class="header-end">
             <div class="container">
                 <div id="myCarousel" class="carousel slide" data-ride="carousel">
-                  <!-- Indicators -->
-                  <ol class="carousel-indicators">
-                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                    <li data-target="#myCarousel" data-slide-to="1"></li>
-                    <li data-target="#myCarousel" data-slide-to="2"></li>
-                  </ol>
-
                   <!-- Wrapper for slides -->
-                  <div class="carousel-inner" role="listbox">
-                    <div class="item active">
-                        <img src="./images/shoe3.jpg" alt="...">
-                        <div class="carousel-caption car-re-posn">
-                            <h3>AirMax</h3>
-                            <h4>You feel to fall</h4>
-                            <span class="color-bar"></span>
-                        </div>
-                    </div>
+                  <img src="./images/shoe3.jpg" alt="...">
+                  <div class="carousel-caption car-re-posn">
+                      <h3>AirMax</h3>
+                      <h4>You feel to fall</h4>
+                      <span class="color-bar"></span>
                   </div>
-
                 </div>
                 <div class="clearfix"></div>
             </div>
         </div>
         <div class="shop-grid">
-            <div class="container">
-
-              <div class="col-md-4 grid-stn simpleCart_shelfItem">
-                  <!-- normal -->
-                  <div class="ih-item square">
-                    <div class="img"><a href="products.html"><img src="images/grid4.jpg" alt="/" class="img-responsive gri-wid"></a></div>
-                    <div class="info">
-                      <div class="col-md-offset-5 styl-hdn">
-                        <a href="products.html"><h3>Category 1</h3></a>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- end normal -->
-              </div>
-
-              <div class="col-md-4 grid-stn simpleCart_shelfItem">
-                  <!-- normal -->
-                  <div class="ih-item square">
-                    <div class="img"><a href="products.html"><img src="images/grid5.jpg" alt="/" class="img-responsive gri-wid"></a></div>
-                    <div class="info">
-                      <div class="col-md-offset-5 styl-hdn">
-                        <a href="products.html"><h3>Category 2</h3></a>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- end normal -->
-              </div>
-
-              <div class="col-md-4 grid-stn simpleCart_shelfItem">
-                  <!-- normal -->
-                  <div class="ih-item square">
-                    <div class="img"><a href="products.html"><img src="images/grid6.jpg" alt="/" class="img-responsive gri-wid"></a></div>
-                    <div class="info">
-                      <div class="col-md-offset-5 styl-hdn">
-                        <a href="products.html"><h3>Category 3</h3></a>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- end normal -->
-              </div>
-
-              <div class="col-md-4 grid-stn simpleCart_shelfItem">
-                  <!-- normal -->
-                  <div class="ih-item square">
-                    <div class="img"><a href="products.html"><img src="images/grid7.jpg" alt="/" class="img-responsive gri-wid"></a></div>
-                    <div class="info">
-                      <div class="col-md-offset-5 styl-hdn">
-                        <a href="products.html"><h3>Category 4</h3></a>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- end normal -->
-              </div>
-
-              <div class="clearfix"></div>
+            <div id="categoriesList" class="container">
             </div>
         </div>
         <div class="footer-grid">
