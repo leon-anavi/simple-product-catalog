@@ -9,9 +9,9 @@ products = [
   // category
   [
     // product
-    { name: "Test",
-      description: "",
-      details: "",
+    { name: "Aliquam",
+      description: "Nullam leo tellus",
+      details: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ultricies lacinia augue, sed tincidunt lorem gravida vitae. Duis pretium lobortis augue, non mattis magna tincidunt in.",
       thumbnail: "grid4.jpg",
       images: ["show.jpg", "show1.jpg", "show2.jpg", "show3.jpg" ],
       downloads: []
@@ -21,7 +21,7 @@ products = [
       description: "",
       details: "",
       thumbnail: "grid6.jpg",
-      images: [],
+      images: ["show.jpg"],
       downloads: []
     }
   ],
@@ -33,7 +33,7 @@ products = [
       description: "",
       details: "",
       thumbnail: "grid4.jpg",
-      images: [],
+      images: ["show.jpg"],
       downloads: []
     },
     // product
@@ -41,7 +41,7 @@ products = [
       description: "",
       details: "",
       thumbnail: "grid6.jpg",
-      images: [],
+      images: ["show.jpg"],
       downloads: []
     }
   ],
@@ -53,7 +53,7 @@ products = [
       description: "",
       details: "",
       thumbnail: "grid3.jpg",
-      images: [],
+      images: ["show1.jpg"],
       downloads: []
     },
     // product
@@ -61,7 +61,7 @@ products = [
       description: "",
       details: "",
       thumbnail: "grid6.jpg",
-      images: [],
+      images: ["show2.jpg"],
       downloads: []
     },
     // product
@@ -69,7 +69,7 @@ products = [
       description: "",
       details: "",
       thumbnail: "grid5.jpg",
-      images: [],
+      images: ["show.jpg"],
       downloads: []
     },
     // product
@@ -77,7 +77,7 @@ products = [
       description: "",
       details: "",
       thumbnail: "grid7.jpg",
-      images: [],
+      images: ["show.jpg"],
       downloads: []
     }
   ],
@@ -89,7 +89,7 @@ products = [
       description: "",
       details: "",
       thumbnail: "grid4.jpg",
-      images: [],
+      images: ["show1.jpg"],
       downloads: []
     }
   ],

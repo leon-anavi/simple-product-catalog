@@ -24,6 +24,36 @@ function retrieveCategory() {
   return category;
 }
 
+function loadProductImages(images) {
+  for (var index=0; index < images.length; index++) {
+    var html = '<li data-thumb="images/';
+    html += images[index];
+    html += '">';
+    html += '<div class="thumb-image"> <img src="images/';
+    html += images[index];
+    html += '" data-imagezoom="true" class="img-responsive"> </div>';
+    html += '</li>';
+    $("#productImages").append(html);
+  }
+}
+
+function retrieveProduct() {
+  var categoryId = retrieveCategory();
+  var productId = getUrlParameter('p');
+  //if category is not set use a default value
+  if ('' == productId) {
+    productId = 0;
+  }
+  var product = products[categoryId][productId];
+  if (undefined === product) {
+    return;
+  }
+  $('#labelTitle').html(product.name);
+  $('#labelDesc').html(product.description);
+  $('#labelDetails').html(product.details);
+  loadProductImages(product.images);
+}
+
 function createItem(name, image, link) {
   var html = '<div class="col-md-4 grid-stn simpleCart_shelfItem">';
   html += '<div class="img">';

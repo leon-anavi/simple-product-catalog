@@ -22,7 +22,7 @@
       <script>
 $( document ).ready(function() {
   createCategories(false);
-  var category = retrieveCategory();
+  retrieveProduct();
 });
       </script>
 		<!--script-->
@@ -94,8 +94,8 @@ $( document ).ready(function() {
             <div class="container">
                 <div class="col-md-8 showcase">
                     <div class="flexslider">
-                          <ul class="slides">
-                            <li data-thumb="images/show.jpg">
+                          <ul id="productImages" class="slides">
+                            <!--<li data-thumb="images/show.jpg">
                                 <div class="thumb-image"> <img src="images/show.jpg" data-imagezoom="true" class="img-responsive"> </div>
                             </li>
                             <li data-thumb="images/show1.jpg">
@@ -106,7 +106,7 @@ $( document ).ready(function() {
                             </li>
                             <li data-thumb="images/show3.jpg">
                                <div class="thumb-image"> <img src="images/show3.jpg" data-imagezoom="true" class="img-responsive"> </div>
-                            </li>
+                            </li>-->
                           </ul>
                         <div class="clearfix"></div>
                     </div>
@@ -141,7 +141,7 @@ $( document ).ready(function() {
                     </div>
                     <div class="showcase-last">
                         <h3>product details</h3>
-                        <p id="labelText">Internal bootie wraps your foot for a sock-like fit. Unique eyestays work. Flywire cables to create an even better glove-like fit.</p>
+                        <p id="labelDetails"></p>
                     </div>
                 </div>
         <div class="clearfix"></div>
