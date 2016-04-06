@@ -20,42 +20,10 @@
 		<!--bootstrap-js-->
 			<script src="js/bootstrap.min.js"></script>
       <script src="js/data.js"></script>
+      <script src="js/catalog.js"></script>
       <script>
-
-function createCategoryButton(name, image) {
-  var category = '<div class="col-md-4 grid-stn simpleCart_shelfItem">';
-  category += '<div class="ih-item square">';
-  category += '<div class="img"><a href="products.html"><img src="images/';
-  category += image;
-  category += '" alt="/" class="img-responsive gri-wid"></a></div>';
-  category += '<div class="info">';
-  category += '<div class="col-md-offset-5 styl-hdn">';
-  category += '<a href="products.html"><h3>';
-  category += name;
-  category += '</h3></a>';
-  category += '</div>';
-  category += '</div>';
-  category += '</div>';
-  category += '</div>';
-  return category;
-}
-
 $( document ).ready(function() {
-  for (var menuItem=0; menuItem<categories.length; menuItem++) {
-
-    //Append categories to the main menu in the header
-    var menuText = '<li><a href="products.html">';
-    menuText += categories[menuItem].name;
-    menuText += '</a></li>';
-    $("#menu").append(menuText);
-
-    //Apend category name and image to the list-style
-    $("#categoriesList").append(createCategoryButton(
-      categories[menuItem].name, categories[menuItem].image));
-  }
-
-  $("#categoriesList").append('<div class="clearfix"></div>');
-
+  createCategories(false);
 });
       </script>
 		<!--script-->
@@ -85,10 +53,7 @@ $( document ).ready(function() {
                         <!-- /.navbar-header -->
 
                         <div class="collapse navbar-collapse collapse-pdng" id="bs-example-navbar-collapse-1">
-                            <ul id="menu" class="nav navbar-nav nav-font">
-                              <div class="clearfix"></div>
-                            </ul>
-                            <div class="clearfix"></div>
+                            <ul id="menu" class="nav navbar-nav nav-font"></ul>
                         </div>
                         <!--/.navbar-collapse-->
                         <div class="clearfix"></div>
@@ -101,14 +66,17 @@ $( document ).ready(function() {
                     <!--header-bottom-->
             </div>
         </div>
-        <div class="shop-grid">
-            <div id="categoriesList" class="container">
-            </div>
+
+        <div class="products-gallery">
+          <div class="container">
+            <div id="categoriesList" class="col-md-12 grid-gallery"></div>
+          </div>
         </div>
+
         <div class="footer-grid">
             <div class="copy-rt">
                 <div class="container">
-            <p>&copy; 2016 ATTengineering </p>
+            <p>&copy; 2016 Open Source </p>
                 </div>
             </div>
         </div>

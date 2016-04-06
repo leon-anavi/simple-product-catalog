@@ -305,7 +305,7 @@ span.fel-fal-bar2{
     text-align: center;
 }
 .styl-hdn {
-    width: 50%;
+    width: 90%;
 }
 .styl-price {
     width: 50%;
@@ -348,7 +348,7 @@ span.fel-fal-bar2{
 }
 
 .styl-hdn A:link {
-		text-decoration: none; 
+		text-decoration: none;
 }
 
 .styl-price p {
@@ -601,8 +601,16 @@ ol.breadcrumb li a:hover{
     font-family: 'Pathway Gothic One';
     color: #fb4c29;
     font-weight: 600;
-    font-size: 16px;
+    font-size: 18px;
 }
+
+.breadcrumb>.active a {
+    font-family: 'Pathway Gothic One';
+    color: #fb4c29;
+    font-weight: 600;
+    font-size: 18px;
+}
+
 .breadcrumb {
     background-color: #FFFFFF;
 }

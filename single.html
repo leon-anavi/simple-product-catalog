@@ -7,10 +7,6 @@
 		<meta name="keywords" content="" />
 		<script type="application/x-javascript"> addEventListener("load", function() {setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 		<meta charset utf="8">
-		<!--fonts-->
-		<link href='//fonts.googleapis.com/css?family=Fredoka+One' rel='stylesheet' type='text/css'>
-
-		<!--fonts-->
 		<!--bootstrap-->
 			 <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
 		<!--coustom css-->
@@ -21,6 +17,14 @@
 			<script src="js/jquery-2.1.4.min.js"></script>
 		<!--bootstrap-js-->
 			<script src="js/bootstrap.min.js"></script>
+      <script src="js/data.js"></script>
+      <script src="js/catalog.js"></script>
+      <script>
+$( document ).ready(function() {
+  createCategories(false);
+  var category = retrieveCategory();
+});
+      </script>
 		<!--script-->
          <!-- FlexSlider -->
             <script src="js/imagezoom.js"></script>
@@ -62,12 +66,7 @@
                         <!--/.navbar-header-->
 
                         <div class="collapse navbar-collapse collapse-pdng" id="bs-example-navbar-collapse-1">
-                            <ul class="nav navbar-nav nav-font">
-                              <li><a href="products.html">Category1</a></li>
-                              <li><a href="products.html">Category2</a></li>
-                              <li><a href="products.html">Category3</a></li>
-                              <li><a href="products.html">Category4</a></li>
-                              <div class="clearfix"></div>
+                            <ul id="menu" class="nav navbar-nav nav-font">
                             </ul>
                             <div class="clearfix"></div>
                         </div>
@@ -86,8 +85,8 @@
             <div class="container">
                 <ol class="breadcrumb">
                     <li><a href="#">Home</a></li>
-                    <li><a href="#">Men</a></li>
-                    <li class="active">Shop</li>
+                    <li><a id="labelCategory" href="#"></a></li>
+                    <li class="active">PRODUCT</li>
                 </ol>
             </div>
         </div>
@@ -115,8 +114,8 @@
                 <div class="col-md-4 showcase">
                     <div class="showcase-rt-top">
                         <div class="pull-left shoe-name">
-                            <h3>Nike Air Max 2015</h3>
-                            <p>Men's running shoes</p>
+                            <h3 id="labelTitle">Title</h3>
+                            <p id="labelDesc">Description</p>
                         </div>
                         <div class="clearfix"></div>
                     </div>
@@ -125,14 +124,10 @@
                         <div class="float-qty-chart">
                         <ul>
                             <li>
-                                <h3>Size Chart</h3>
+                                <h3>SCHEMATICS</h3>
                                 <select class="form-control siz-chrt">
-                                  <option>6 US</option>
-                                  <option>7 US</option>
-                                  <option>8 US</option>
-                                  <option>9 US</option>
-                                  <option>10 US</option>
-                                  <option>11 US</option>
+                                  <option>PDF</option>
+                                  <option>SolidWorks</option>
                                 </select>
                             </li>
                         </ul>
@@ -146,13 +141,7 @@
                     </div>
                     <div class="showcase-last">
                         <h3>product details</h3>
-                        <ul>
-                            <li>Internal bootie wraps your foot for a sock-like fit</li>
-        <li>Unique eyestays work with the Flywire cables to create an even better glove-like fit</li>
-                            <li>Waffle outsole for durability and multi-surface traction</li>
-        <li>Sculpted Cushlon midsole combines plush cushioning and springy resilience for impact protection</li>
-                            <li>Midsole flex grooves for greater forefoot flexibility</li>
-                        </ul>
+                        <p id="labelText">Internal bootie wraps your foot for a sock-like fit. Unique eyestays work. Flywire cables to create an even better glove-like fit.</p>
                     </div>
                 </div>
         <div class="clearfix"></div>
