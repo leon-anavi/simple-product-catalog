@@ -590,7 +590,7 @@ ol.breadcrumb li a {
     font-weight: bold;
     color: #100B0B;
     font-family: 'Pathway Gothic One';
-    font-size: 18px;
+    font-size: 36px;
     text-shadow: none;
 }
 ol.breadcrumb li a:hover{
@@ -601,14 +601,14 @@ ol.breadcrumb li a:hover{
     font-family: 'Pathway Gothic One';
     color: #fb4c29;
     font-weight: 600;
-    font-size: 18px;
+    font-size: 36px;
 }
 
 .breadcrumb>.active a {
     font-family: 'Pathway Gothic One';
     color: #fb4c29;
     font-weight: 600;
-    font-size: 18px;
+    font-size: 36px;
 }
 
 .breadcrumb {

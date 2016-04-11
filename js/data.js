@@ -1,36 +1,45 @@
 categories = [
-    { name: "Category1", image: "grid4.jpg" },
-    { name: "Category2", image: "grid5.jpg" },
-    { name: "Category3", image: "grid6.jpg" },
-    { name: "Category4", image: "grid7.jpg" }
+    { name: "125A", image: "grid4.jpg" },
+    { name: "160A", image: "grid5.jpg" },
+    { name: "250A", image: "grid6.jpg" },
+    { name: "630A", image: "grid7.jpg" },
+    { name: "Accessories", image: "grid7.jpg" },
   ];
 
 products = [
-  // category
+  // category 125A
   [
     // product
-    { name: "Aliquam",
-      description: "Nullam leo tellus",
-      details: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ultricies lacinia augue, sed tincidunt lorem gravida vitae. Duis pretium lobortis augue, non mattis magna tincidunt in.",
-      thumbnail: "grid4.jpg",
+    { name: "2 rolls",
+      description: "430x520",
+      details: "Aluminium Electricl board up to 125A",
+      thumbnail: "2reda.jpg",
       images: ["show.jpg", "show1.jpg", "show2.jpg", "show3.jpg" ],
       downloads: []
     },
     // product
-    { name: "Test2",
-      description: "",
+    { name: "3 ROLLS",
+      description: "430x520",
       details: "",
-      thumbnail: "grid6.jpg",
+      thumbnail: "3reda.jpg",
+      images: ["show.jpg"],
+      downloads: []
+    },
+    // product
+    { name: "4 ROLLS",
+      description: "430x520",
+      details: "",
+      thumbnail: "3reda.jpg",
       images: ["show.jpg"],
       downloads: []
     }
   ],
 
-  // category
+  // category 160A
   [
     // product
     { name: "Suspendisse consectetur",
-      description: "",
+ description: "",
       details: "",
       thumbnail: "grid4.jpg",
       images: ["show.jpg"],
@@ -46,7 +55,7 @@ products = [
     }
   ],
 
-  // category
+  // category 630A
   [
     // product
     { name: "Suspendisse consectetur",
@@ -82,7 +91,7 @@ products = [
     }
   ],
 
-  // category
+  // category Accessories
   [
     // product
     { name: "Test",
