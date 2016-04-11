@@ -52,6 +52,8 @@ function retrieveProduct() {
   $('#labelDesc').html(product.description);
   $('#labelDetails').html(product.details);
   loadProductImages(product.images);
+
+  showLastCategory(categoryId);
 }
 
 function createItem(name, image, link) {
@@ -112,4 +114,12 @@ function createProducts(category) {
   }
 
   $("#productsList").append('<div class="clearfix"></div>');
+}
+
+function showLastCategory(currentCategory) {
+  var lastCategory = products.length - 1;
+  if ( (0 > lastCategory) || (currentCategory === lastCategory) ) {
+    return;
+  }
+  createProducts(lastCategory);
 }
