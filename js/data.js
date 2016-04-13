@@ -1,3 +1,7 @@
+// ID of categories for which products from the last category, aka accessories,
+// should be lised below the product description on single.html
+categoriesShowAdditionalList = [1,2,3];
+
 categories = [
     { name: "Category1", image: "grid4.jpg" },
     { name: "Category2", image: "grid5.jpg" },

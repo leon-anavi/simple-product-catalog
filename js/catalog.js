@@ -118,7 +118,12 @@ function createProducts(category) {
 
 function showLastCategory(currentCategory) {
   var lastCategory = products.length - 1;
-  if ( (0 > lastCategory) || (currentCategory === lastCategory) ) {
+  // Check and do a typecast to integer if needed
+  if (false === Number.isInteger(currentCategory)) {
+    currentCategory = parseInt(currentCategory);
+  }
+  if ( (currentCategory === lastCategory) ||
+       (-1 === categoriesShowAdditionalList.indexOf(currentCategory)) ) {
     return;
   }
   createProducts(lastCategory);
